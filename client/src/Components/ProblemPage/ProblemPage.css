@@ -1,0 +1,125 @@
+/* ProblemPage Layout */
+#problempage {
+    min-height: 91vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--spacing-2xl);
+    padding: var(--spacing-2xl);
+  }
+  
+  /* Left Section: Problem Description */
+  .ques {
+    width: 50%;
+    background: var(--card-bg);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .ques h1,
+  .ques h5 {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .ques p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  
+  .ques code {
+    display: block;
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.95rem;
+  }
+  
+  /* Right Section: Code Editor */
+  .code {
+    width: 50%;
+    background: var(--card-bg);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .code h1 {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  /* Code Editor Form */
+  .code-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    height: 70vh;
+  }
+  
+  /* Textarea Code Box */
+  textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    padding: var(--spacing-md);
+    background: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    color: var(--text-primary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    line-height: 1.6;
+    tab-size: 4;
+    transition: border-color var(--transition-fast), background var(--transition-fast);
+  }
+  
+  textarea:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    background: var(--hover-bg);
+  }
+  
+  /* Buttons */
+  button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-weight: 700;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    border: none;
+  }
+  
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  #test {
+    background: gray;
+    color: white;
+  }
+  
+  #submit {
+    background: var(--success-color);
+    color: black;
+  }
+  
+  /* Error/Fallback Message */
+  .fallback {
+    color: var(--error-color);
+    font-weight: 600;
+    padding: var(--spacing-lg);
+    background: rgba(255, 59, 48, 0.1);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--error-color);
+  }
+  
